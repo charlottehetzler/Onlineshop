@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="homepage">
+  <div class="banner" style="background-image: url('<%= image_path "banner-plates" %>');">
+    <div class="banner-content">
+      <h1>MYOS</h1>
+      <p><%= link_to "Have a look at our products", products_path, class:"banner-link"%></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.card {
+  color: black;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 140px;
+  margin: 10px;
+}
+
+.card-img {
+  background-size: cover !important;
+  background-position: center;
+  height: 100%;
+  border-radius: 2px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+.card-description {
+  text-align: left;
+  bottom: 10px;
+  left: 10px;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  margin: 0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  h2 {
+    font-size: 24px;
+    color: black;
+    margin: 0px;
+  }
+  p {
+  font-size: 16px;
+  opacity: 0.7;
+  font-weight: lighter lighter;
+  margin: 0px;
+  margin-top: 3px;
+  }
+}
+
+h3.price {
+  font-size: 20px;
+  text-align: right;
+  padding-right: 10px;
+
+}

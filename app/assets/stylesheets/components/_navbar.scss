@@ -1,12 +1,71 @@
-.navbar-lewagon {
-  justify-content: space-between;
+// Main Navbar
+.navbar {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+// Logo and Name
+.navbar-brand {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+    h2 {
+      margin-bottom: 0px;
+      font-size: 34px;
+      padding-left: 10px;
+      margin-left: 10px;
+      color: #006DAA;
+      opacity: 0.7;
+    }
+    img {
+      height: 50px;
+    }
+}
+
+// Search
+#search-form {
+  display: flex;
+  position: left;
+}
+
+#search {
+  width: 350px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: 35px;
+}
+
+index #search {display:none}
+
+.search-icon {
+  border: white;
+  font-size: 24px;
+  padding: 1px 4px 0 6px;
+  margin-left: 5px;
+  transition:  0.2s ease
+}
+
+.search-icon:hover {
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+//Shopping Cart
+
+.fas {
+  margin-right: 10px;
 }
