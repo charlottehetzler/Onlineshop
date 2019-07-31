@@ -9,7 +9,7 @@
       <% if order.status == 'open' %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card">
-          <div class="card-img", id="order-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= image_path 'scart' %>');">
+          <div class="card-img", id="order-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= image_path 'scart.png' %>');">
           </div>
           <div class="card-description">
             <p class="order-date"style="text-align: center; margin-bottom: 10px;"><%= order.updated_at.to_datetime.strftime("%A, %b %d %Y") %></p>
