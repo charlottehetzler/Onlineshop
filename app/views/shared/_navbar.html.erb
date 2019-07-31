@@ -2,27 +2,31 @@
 
   <!-- Logo & Name -->
   <div class="navbar-brand">
-    <%= link_to root_path do %>
-    <%= image_tag "bowl.jpg", height: 50 %>
+    <%= link_to products_path do %>
+    <%= image_tag "logo.jpg", height: 50 %>
     <% end %>
+    <%= link_to products_path do %>
     <h2>MYOS</h2>
+    <% end %>
   </div>
-
-  <!-- Search -->
-  <div id="navbar-search"  hidden-xs hidden-sm>
-    <div id="search-bar">
-      <%= form_tag(products_path, :method => "get", id: "search-form", remote: true) do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Look for...", class: "form-control" %>
-      <%= submit_tag "search", type: "submit", class: "search-icon"%>
-      <% end %>
-    </div>
+  <% if current_page?(products_path)  %>
+  <div class="search-form">
+    <%= form_tag products_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class:"form-control", placeholder:"Look for..." %>
+      <%= button_tag :submit, class: "product-button" do %>
+      <i class="fas fa-search"></i>
+    <% end %>
+    <% end %>
   </div>
+  <% end %>
 
   <!-- Shopping -->
-
   <div class="navbar-shopping">
+    <%= link_to cart_path do %>
     <i class="fas fa-shopping-cart"></i>
-    <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
+    <p><%= pluralize(current_cart.items_count, 'Item') %></p>
+    <% end %>
   </div>
 
 </div>
+

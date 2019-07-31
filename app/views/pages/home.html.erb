@@ -1,8 +1,10 @@
 <div class="homepage">
-  <div class="banner" style="background-image: url('<%= image_path "banner-plates" %>');">
+  <%= link_to products_path do %>
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.3) 19%, rgba(180, 180, 180, 0.5) 40%), url('<%= image_path "banner-plates" %>');">
     <div class="banner-content">
       <h1>MYOS</h1>
-      <p><%= link_to "Have a look at our products", products_path, class:"banner-link"%></p>
+      <p>Click anywhere to take a closer look at our products</p>
     </div>
   </div>
+  <% end %>
 </div>

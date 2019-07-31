@@ -1,22 +1,28 @@
 <div class="container">
+
+  <div class="header">
+    <h2>Have a closer look on </h2>
+  </div>
+
   <div class="grid-show">
     <div class="card-show">
       <div class="card">
-        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'bowl' %>')">
+        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'bowl' %>');">
         </div>
         <div class="card-description">
-          <%= @product.title  %>
+          <h3 id="card-description-title"> <%= @product.title %></h3>
+          <div class="info-show">
+            <p><%= @product.description %></p>
+            <p><strong> <%= @product.price %> €</strong></p>
+          </div>
+          <%= form_tag order_items_path do %>
+            <%= hidden_field_tag :product_id, @product.id %>
+            <%= number_field_tag :quantity, 1 %>
+            <%= submit_tag "Add to Cart", class:"btn btn-primary btn-show" %>
+          <% end %>
         </div>
       </div>
     </div>
-    <div class="info-show">
-      <p><%= @product.description %></p>
-      <p><%= @product.price %>€</p>
-    </div>
-      <%= form_tag order_items_path do %>
-        <%= hidden_field_tag :product_id, @product.id %>
-        <%= number_field_tag :quantity, 1 %>
-        <%= submit_tag "Add to Cart" %>
-      <% end %>
   </div>
+
 </div>

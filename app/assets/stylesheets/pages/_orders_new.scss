@@ -1,0 +1,36 @@
+.order-overview {
+  display: inline-block;
+}
+
+form.checkout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+}
+
+input#order_email {
+  margin-right: 10px;
+  padding: 6px;
+}
+
+input.myos-button {
+  width: 220px;
+}
+
+
+// Responsive
+
+@media (max-width: 720px) {
+  input#order_email {
+    width: 100%
+  }
+  input.myos-button {
+  width: 100%;
+}
+  form.checkout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+

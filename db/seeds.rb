@@ -5,27 +5,39 @@ puts "destroying previous database"
 puts "creating products"
 
 Product.create!(
-              title: "Pillows",
-              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptatem.",
-              price: rand(20..200),
-              picture: "https://unsplash.com/photos/fQ2XuWjSzfE"
+              title: "mug",
+              description: "Ceramic mug perfect for the early morning coffee.",
+              price: 12.99,
               )
 Product.create!(
-              title: "Cup",
-              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptatem.",
-              price: rand(20..200),
-              picture: "https://unsplash.com/photos/fQ2XuWjSzfE"
+              title: "plates",
+              description: "Set of various plates. Also available in different colors.",
+              price: 24.95,
               )
 Product.create!(
-              title: "Vase",
-              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptatem.",
-              price: rand(20..200),
-              picture: "https://unsplash.com/photos/fQ2XuWjSzfE"
+              title: "vase",
+              description: "Beautiful vase in light colors.",
+              price: 7.99,
               )
 Product.create!(
-              title: "Blanket",
-              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptatem.",
-              price: rand(20..200),
-              picture: "https://unsplash.com/photos/fQ2XuWjSzfE"
+              title: "doses",
+              description: "Two sugar doses that pimp up every tea time",
+              price: 36.85,
               )
+Product.create!(
+              title: "cup",
+              description: "Handmade white cup for tea or coffee.",
+              price: 19.99,
+              )
+Product.create!(
+              title: "bowl",
+              description: "Small bowl perfect for in between snacks.",
+              price: 12.99,
+              )
+Product.create!(
+              title: "espresso",
+              description: "Two espresso cups. Come together with small plates.",
+              price: 29.99,
+              )
+
 puts "seeding done"

@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  # get 'orders/show'
-  # get 'orders/create'
-  # get 'orders/new'
-  # get 'order_items/index'
-  # get 'order_items/create'
-  # get 'order_items/destroy'
   root to: 'pages#home'
   resources :products, only: [:index, :show]
 

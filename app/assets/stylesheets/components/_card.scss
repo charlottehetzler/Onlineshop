@@ -1,8 +1,7 @@
 .card {
-  color: black;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 300px 140px;
+  grid-template-rows: 300px 150px;
   margin: 10px;
 }
 
@@ -23,23 +22,40 @@
   margin: 0px;
   padding-top: 10px;
   padding-left: 10px;
-  h2 {
+  h3, a {
     font-size: 24px;
-    color: black;
+    color: $darkblue;
     margin: 0px;
+    text-transform: capitalize;
+    a:hover {
+      text-decoration: none;
+    }
   }
   p {
   font-size: 16px;
   opacity: 0.7;
-  font-weight: lighter lighter;
   margin: 0px;
   margin-top: 3px;
+  color: $gray;
   }
 }
 
-h3.price {
-  font-size: 20px;
-  text-align: right;
-  padding-right: 10px;
+h3#card-description-title {
+  font-size: 24px;
+  color: $darkblue;
+  margin: 0px;
+}
 
+// Responsive
+
+@media(max-width: 720px) {
+  .card {
+    grid-template-rows: 300px 180px;
+  }
+}
+
+@media(max-width: 414px) {
+  .card {
+    grid-template-rows: 240px 180px;
+  }
 }

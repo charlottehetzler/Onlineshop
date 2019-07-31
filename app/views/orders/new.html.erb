@@ -1,15 +1,13 @@
 <div class="container">
+
   <div class="header">
     <h2>Checkout</h2>
   </div>
-  <div class="order-overview">
-    <%= form_for @order, url: checkout_path do |f| %>
-      <%= f.label :email %>
-      <%= f.text_field :email %>
 
-      <%= f.submit 'Complete Order' %>
-    <% end %>
-  </div>
+  <p>Please enter your Email adress to complete your order.</p>
+  <%= form_for @order, url: checkout_path, class: "form-checkout" do |f| %>
+    <%= f.text_field :email %>
+    <%= f.submit 'Complete Order', class: "myos-button" %>
+  <% end %>
 
 </div>
-
