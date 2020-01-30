@@ -5,7 +5,7 @@ gem 'pg_search'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
-gem 'puma'
+gem 'puma', '>= 4.3.1'
 gem 'rails', '5.2.3'
 gem 'redis'
 
@@ -17,7 +17,6 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-
 
 group :development do
   gem 'web-console', '>= 3.3.0'
